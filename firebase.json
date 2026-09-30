@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/gestao-financeira/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
