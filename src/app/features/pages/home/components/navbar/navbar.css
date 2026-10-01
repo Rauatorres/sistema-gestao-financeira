@@ -1,0 +1,9 @@
+nav {
+  display: flex;
+  width: fit-content;
+  gap: 1rem;
+
+  @media (min-width: 900px) {
+    flex-direction: column;
+  }
+}

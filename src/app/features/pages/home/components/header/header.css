@@ -1,0 +1,25 @@
+header {
+  background-color: var(--header-bg-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  @media (min-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+h1,
+a {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.logout_button {
+}

@@ -1,1 +1,8 @@
-<h1>Header</h1>
+<header>
+  <h1 class="titulo">Usuário</h1>
+  @if (isViewportWidthLarge()) {
+    <app-navbar />
+  } @else {
+    <a href="" class="logout_button"><mat-icon>logout</mat-icon></a>
+  }
+</header>

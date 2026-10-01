@@ -1,5 +1,9 @@
 <app-header />
-
-<router-outlet />
+<main>
+  @if (!isViewportWidthLarge()) {
+    <app-navbar />
+  }
+  <router-outlet />
+</main>
 
 <app-footer />

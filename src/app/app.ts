@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { fromEvent, map } from 'rxjs';
+import { Viewport } from './core/viewport/viewport';
 
 @Component({
   imports: [RouterOutlet],
@@ -7,6 +9,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('gestao-financeira');
+export class App implements OnInit {
+  viewport = inject(Viewport);
+  private destroyRef = inject(DestroyRef);
+
+  ngOnInit(): void {
+    const subscription = fromEvent(window, 'resize')
+      .pipe(map(() => window.innerWidth))
+      .subscribe((viewportWidth) => this.viewport.width.set(viewportWidth));
+
+    this.destroyRef.onDestroy(() => subscription.unsubscribe());
+  }
 }

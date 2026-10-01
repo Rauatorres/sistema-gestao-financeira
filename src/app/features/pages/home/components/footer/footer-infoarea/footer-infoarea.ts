@@ -1,0 +1,11 @@
+import { Component, input } from '@angular/core';
+
+@Component({
+  imports: [],
+  selector: 'app-footer-infoarea',
+  styleUrl: './footer-infoarea.css',
+  templateUrl: './footer-infoarea.html',
+})
+export class FooterInfoarea {
+  title = input.required<string>();
+}

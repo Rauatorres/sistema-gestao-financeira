@@ -1,9 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FooterInfoarea } from './footer-infoarea/footer-infoarea';
+import { MatIcon, MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  imports: [],
+  imports: [FooterInfoarea, MatIcon],
   selector: 'app-footer',
   styleUrl: './footer.css',
   templateUrl: './footer.html',
 })
-export class Footer {}
+export class Footer {
+  private iconRegistry = inject(MatIconRegistry);
+  private sanitizer = inject(DomSanitizer);
+
+  private getIconSvgHTMl(svgName: string) {
+    return `
+      <svg>
+        <use href="/icons/${svgName}"></use>
+      </svg>
+    `;
+  }
+
+  private githubSvg = this.getIconSvgHTMl('github-brands-solid-full.svg');
+  private linkedinSvg = this.getIconSvgHTMl('linkedin-brands-solid-full.svg');
+
+  constructor() {
+    this.iconRegistry.addSvgIconLiteral(
+      'github',
+      this.sanitizer.bypassSecurityTrustHtml(this.githubSvg),
+    );
+    this.iconRegistry.addSvgIconLiteral(
+      'linkedin',
+      this.sanitizer.bypassSecurityTrustHtml(this.linkedinSvg),
+    );
+  }
+}
