@@ -1,0 +1,16 @@
+footer {
+  border-top: 1px var(--footer-border-color) solid;
+  padding: 2rem 1.5rem;
+}
+
+.info-container {
+  display: flex;
+  /* background-color: red; */
+  /* justify-content: space-between; */
+}
+
+.infoarea {
+  /* background-color: blue; */
+  /* padding: 1rem; */
+  width: 50%;
+}

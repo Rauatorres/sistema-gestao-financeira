@@ -23,6 +23,7 @@ export class Footer {
 
   private githubSvg = this.getIconSvgHTMl('github-brands-solid-full.svg');
   private linkedinSvg = this.getIconSvgHTMl('linkedin-brands-solid-full.svg');
+  private angularSvg = this.getIconSvgHTMl('angular-brands-solid-full.svg');
 
   constructor() {
     this.iconRegistry.addSvgIconLiteral(
@@ -32,6 +33,10 @@ export class Footer {
     this.iconRegistry.addSvgIconLiteral(
       'linkedin',
       this.sanitizer.bypassSecurityTrustHtml(this.linkedinSvg),
+    );
+    this.iconRegistry.addSvgIconLiteral(
+      'angular',
+      this.sanitizer.bypassSecurityTrustHtml(this.angularSvg),
     );
   }
 }
