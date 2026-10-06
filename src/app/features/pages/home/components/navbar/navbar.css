@@ -1,9 +1,9 @@
-nav {
+:host {
   display: flex;
   width: fit-content;
-  gap: 1rem;
+  gap: 1.3rem;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1025px) {
     flex-direction: column;
   }
 }

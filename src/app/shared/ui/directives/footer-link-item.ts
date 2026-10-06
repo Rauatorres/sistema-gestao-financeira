@@ -11,15 +11,20 @@ export class FooterItem {
   private destroyRef = inject(DestroyRef);
 
   get isViewportWidthLarge() {
-    return computed(() => this.viewport.width() > 920);
+    return computed(() => this.viewport.width() >= 1025);
+  }
+  get isViewportWidthMedium() {
+    return computed(() => this.viewport.width() >= 768);
   }
 
   private updateStyle() {
     if (this.isViewportWidthLarge()) {
-      this.element.nativeElement.style.marginRight = '2rem';
+      this.element.nativeElement.style.marginRight = '0.5rem';
+    } else if (this.isViewportWidthMedium()) {
+      // this.element.nativeElement.style.fontSize = '2rem';
     } else {
       this.element.nativeElement.style.marginRight = '0.5rem';
-      this.element.nativeElement.style.fontSize = '1.5rem';
+      // this.element.nativeElement.style.fontSize = '1.5rem';
     }
   }
 

@@ -1,4 +1,4 @@
 <h3>{{ title() }}</h3>
-<div class="content-area">
+<div [class]="'content-area' + ' ' + type()">
   <ng-content />
 </div>

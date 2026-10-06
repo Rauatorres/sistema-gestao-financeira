@@ -5,8 +5,8 @@ import { MatIcon } from '@angular/material/icon';
 import { Navlink } from './navlink/navlink';
 
 @Component({
-  imports: [RouterLink, MatIcon, Navlink],
-  selector: 'app-navbar',
+  imports: [Navlink],
+  selector: 'nav[app-navbar]',
   styleUrl: './navbar.css',
   templateUrl: './navbar.html',
 })
@@ -14,6 +14,6 @@ export class Navbar {
   viewport = inject(Viewport);
 
   get isViewportWidthLarge() {
-    return computed(() => this.viewport.width() >= 900);
+    return computed(() => this.viewport.width() >= 1025);
   }
 }

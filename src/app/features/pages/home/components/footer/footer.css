@@ -1,6 +1,8 @@
-footer {
+:host {
   border-top: 1px var(--footer-border-color) solid;
   padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-container {
@@ -16,10 +18,40 @@ footer {
 
 .infoarea {
   /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
   width: 50%;
 }
 
 .angular-brand-text {
   font-size: 0.6rem;
   margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  :host {
+    padding: 2.7rem;
+    gap: 1.5rem;
+  }
+  .footer-title {
+    font-size: 1.7rem;
+  }
+  .infoarea {
+    gap: 0.5rem;
+  }
+  .link-icon,
+  .angular-brand-icon {
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .angular-brand-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-title {
+    font-size: 1.3rem;
+  }
 }

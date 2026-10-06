@@ -6,7 +6,7 @@ import { Viewport } from '../../../../../core/viewport/viewport';
 
 @Component({
   imports: [MatIconModule, Navbar],
-  selector: 'app-header',
+  selector: 'header[app-header]',
   styleUrl: './header.css',
   templateUrl: './header.html',
 })
@@ -14,6 +14,6 @@ export class Header {
   viewport = inject(Viewport);
 
   get isViewportWidthLarge() {
-    return computed(() => this.viewport.width() >= 900);
+    return computed(() => this.viewport.width() >= 1025);
   }
 }

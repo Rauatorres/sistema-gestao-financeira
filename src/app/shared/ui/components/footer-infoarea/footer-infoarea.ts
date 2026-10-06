@@ -11,4 +11,5 @@ import { Component, input } from '@angular/core';
 })
 export class FooterInfoarea {
   title = input.required<string>();
+  type = input.required<'links' | 'angular'>();
 }

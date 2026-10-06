@@ -6,7 +6,7 @@ import { FooterItem } from '../../../../../shared/ui/directives/footer-link-item
 
 @Component({
   imports: [FooterInfoarea, MatIcon, FooterItem],
-  selector: 'app-footer',
+  selector: 'footer[app-footer]',
   styleUrl: './footer.css',
   templateUrl: './footer.html',
 })

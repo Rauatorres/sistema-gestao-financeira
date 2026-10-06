@@ -1,25 +1,47 @@
-header {
+:host {
   background-color: var(--header-bg-color);
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 2rem;
-
-  @media (min-width: 900px) {
-    flex-direction: column;
-  }
+  padding: 1rem 2.5rem;
 }
 
 h1,
 a {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-.logout_button {
+.logout-button {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .logout-button-icon {
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  :host {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 0.9rem;
+  }
 }
