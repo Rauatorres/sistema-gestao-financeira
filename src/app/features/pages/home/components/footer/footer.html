@@ -1,14 +1,19 @@
 <footer>
-  <div>App feito por <strong>Rauã Torres</strong></div>
+  <div class="footer-title">App feito por <strong>Rauã Torres</strong></div>
   <div class="info-container">
     <app-footer-infoarea title="Meus links">
-      <a href="https://github.com/Rauatorres/" target="_blank"><mat-icon svgIcon="github" /></a>
-      <a href="https://linkedin.com/in/rauatorres/" target="_blank"
-        ><mat-icon svgIcon="linkedin"
+      <a href="https://github.com/Rauatorres/" target="_blank" appFooterLinkItem
+        ><mat-icon svgIcon="github" style="color: black"
+      /></a>
+      <a href="https://linkedin.com/in/rauatorres/" target="_blank" appFooterLinkItem
+        ><mat-icon svgIcon="linkedin" style="color: #0077b5"
       /></a>
     </app-footer-infoarea>
     <app-footer-infoarea title="Feito com">
-      <span><mat-icon svgIcon="angular" /></span> <span>Angular</span>
+      <span style="display: flex; align-items: center"
+        ><mat-icon svgIcon="angular" style="color: #e23237"
+      /></span>
+      <span class="angular-brand-text" appFooterItem>Angular</span>
     </app-footer-infoarea>
   </div>
 </footer>

@@ -1,16 +1,25 @@
 footer {
   border-top: 1px var(--footer-border-color) solid;
-  padding: 2rem 1.5rem;
+  padding: 2rem 2.5rem;
 }
 
 .info-container {
   display: flex;
+  margin-top: 1rem;
   /* background-color: red; */
   /* justify-content: space-between; */
 }
 
+.footer-title {
+  font-size: 0.9rem;
+}
+
 .infoarea {
-  /* background-color: blue; */
   /* padding: 1rem; */
   width: 50%;
+}
+
+.angular-brand-text {
+  font-size: 0.6rem;
+  margin-left: 0.5rem;
 }

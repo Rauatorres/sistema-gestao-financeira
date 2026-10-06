@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { FooterInfoarea } from './footer-infoarea/footer-infoarea';
+import { FooterInfoarea } from '../../../../../shared/ui/components/footer-infoarea/footer-infoarea';
 import { MatIcon, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { FooterItem } from '../../../../../shared/ui/directives/footer-link-item';
 
 @Component({
-  imports: [FooterInfoarea, MatIcon],
+  imports: [FooterInfoarea, MatIcon, FooterItem],
   selector: 'app-footer',
   styleUrl: './footer.css',
   templateUrl: './footer.html',

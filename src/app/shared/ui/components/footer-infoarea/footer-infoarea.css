@@ -1,0 +1,13 @@
+/* .info-area {
+  background-color: red;
+} */
+
+h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.content-area {
+  display: flex;
+  align-items: center;
+}
