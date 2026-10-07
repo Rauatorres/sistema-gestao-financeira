@@ -4,9 +4,10 @@ import { Saldo as OperadorSaldo } from '../../../operacoes/saldo';
 import { FormsModule } from '@angular/forms';
 import { HistoricoDia } from '../components/historico-dia/historico-dia';
 import { Operacoes } from '../../../operacoes/operacoes';
+import { OperacaoSaldoButton } from '../../../../shared/ui/components/operacao-saldo-button/operacao-saldo-button';
 
 @Component({
-  imports: [SaldoCard, FormsModule, HistoricoDia],
+  imports: [SaldoCard, FormsModule, HistoricoDia, OperacaoSaldoButton],
   selector: 'app-saldo',
   styleUrl: './saldo.css',
   templateUrl: './saldo.html',
