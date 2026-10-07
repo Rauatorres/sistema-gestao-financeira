@@ -1,6 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { HistoricoDia as HistoricoDiaService } from '../../../../operations/historico-dia';
+import { Component, inject, signal } from '@angular/core';
+import { HistoricoDia as HistoricoDiaService } from '../../../../operacoes/historico-dia';
 import { HistoricoDiaRegistro } from './historico-dia-registro/historico-dia-registro';
+import { OperacaoDia } from '../../../../../shared/model/operacao-dia';
+import { Operacoes } from '../../../../operacoes/operacoes';
 
 @Component({
   imports: [HistoricoDiaRegistro],
@@ -10,5 +12,9 @@ import { HistoricoDiaRegistro } from './historico-dia-registro/historico-dia-reg
 })
 export class HistoricoDia {
   historicoDiaService = inject(HistoricoDiaService);
-  registros = this.historicoDiaService.operacoes();
+  operacoes = inject(Operacoes);
+
+  get registros() {
+    return this.historicoDiaService.operacoes();
+  }
 }

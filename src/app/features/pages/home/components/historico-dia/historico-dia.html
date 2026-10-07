@@ -4,6 +4,10 @@
 </div>
 <ul>
   @for (registro of registros; track registro.id) {
-    <li [registro]="registro" app-historico-dia-registro></li>
+    <li
+      [registro]="registro"
+      (onDeletar)="operacoes.reverter($event)"
+      app-historico-dia-registro
+    ></li>
   }
 </ul>

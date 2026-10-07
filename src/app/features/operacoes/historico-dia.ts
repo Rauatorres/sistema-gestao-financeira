@@ -32,7 +32,7 @@ export class HistoricoDia {
 
   remover(id: string) {
     this.operacoes.update((operacoesAtuais) =>
-      operacoesAtuais.filter((operacao) => operacao.id == id),
+      operacoesAtuais.filter((operacao) => operacao.id != id),
     );
   }
 
