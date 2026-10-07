@@ -1,1 +1,15 @@
-<p>saldo works!</p>
+<section>
+  <div [total]="total" app-saldo-card></div>
+  <form>
+    <h2>Novo lançamento</h2>
+    <input type="number" [(ngModel)]="operacao.valor" name="valor" />
+    <input type="text" name="titulo" [(ngModel)]="operacao.titulo" />
+    <button (click)="adicionar()">adicionar</button>
+    <button (click)="retirar()">subtrair</button>
+  </form>
+</section>
+
+<section>
+  <h2>Histórico do dia</h2>
+  <app-historico-dia />
+</section>

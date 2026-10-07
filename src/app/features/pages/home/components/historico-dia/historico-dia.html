@@ -1,0 +1,9 @@
+<div>
+  <h3>Valor(R$)</h3>
+  <h3>Título</h3>
+</div>
+<ul>
+  @for (registro of registros; track registro.id) {
+    <li [registro]="registro" app-historico-dia-registro></li>
+  }
+</ul>
