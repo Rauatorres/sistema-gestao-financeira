@@ -1,9 +1,10 @@
 import { Component, inject, input, output } from '@angular/core';
 import { OperacaoDia } from '../../../../../../shared/model/operacao-dia';
+import { BotaoDeletar } from '../../../../../../shared/ui/components/botao-deletar/botao-deletar';
 // import { OperadorSaldo } from '../../../../../operacoes/operador-saldo';
 
 @Component({
-  imports: [],
+  imports: [BotaoDeletar],
   selector: 'li[app-historico-dia-registro]',
   styleUrl: './historico-dia-registro.css',
   templateUrl: './historico-dia-registro.html',
