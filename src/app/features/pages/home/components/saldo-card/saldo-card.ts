@@ -1,7 +1,8 @@
+import { DecimalPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 @Component({
-  imports: [],
+  imports: [DecimalPipe],
   selector: 'div[app-saldo-card]',
   styleUrl: './saldo-card.css',
   templateUrl: './saldo-card.html',

@@ -5,6 +5,12 @@
   --navlink-bg-color: #cecece;
   --navlink-bg-color-active: #252525;
   --footer-border-color: #b1b1b1;
+  --main-card-bg-color: #1c90ef;
+  --primary-button-bg: #252525;
+  --danger-button-bg: #d83021;
+  --input-border-strong: #787878;
+  --input-text-color: #525252;
+  --input-focus-bg-color: #cacaca;
 }
 
 body {

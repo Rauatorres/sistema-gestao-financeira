@@ -1,15 +1,45 @@
-<section>
+<section class="saldo-section">
   <div [total]="total" app-saldo-card></div>
   <form>
-    <h2>Novo lançamento</h2>
-    <input type="number" [(ngModel)]="operacao.valor" name="valor" />
-    <input type="text" name="titulo" [(ngModel)]="operacao.titulo" />
-    <app-operacao-saldo-button (click)="adicionar()" texto="adicionar" icon="add" />
-    <app-operacao-saldo-button (click)="retirar()" texto="subtrair" icon="remove" />
+    <h2 class="section-title">Novo lançamento</h2>
+    <div class="input-area">
+      <div>
+        <input
+          class="saldo-input valor"
+          type="number"
+          [(ngModel)]="operacao.valor"
+          name="valor"
+          app-input
+        />
+      </div>
+      <input
+        class="saldo-input"
+        type="text"
+        name="titulo"
+        [(ngModel)]="operacao.titulo"
+        app-input
+      />
+    </div>
+    <div class="buttons-area">
+      <button
+        styleType="primary"
+        app-operacao-button
+        (click)="adicionar()"
+        texto="adicionar"
+        icon="add"
+      ></button>
+      <button
+        styleType="danger"
+        app-operacao-button
+        (click)="retirar()"
+        texto="subtrair"
+        icon="remove"
+      ></button>
+    </div>
   </form>
 </section>
 
 <section>
-  <h2>Histórico do dia</h2>
+  <h2 class="section-title">Histórico do dia</h2>
   <app-historico-dia />
 </section>
