@@ -1,3 +1,6 @@
-<span>{{ registro().valor | valorOperacao }}</span>
-<span>{{ registro().titulo }}</span>
+<span class="area-valor-operacao" [class.negativo]="registro().valor < 0">
+  <span>R$</span>
+  <span>{{ registro().valor | valorOperacao }}</span>
+</span>
+<span class="titulo-operacao">{{ registro().titulo }}</span>
 <button type="button" (click)="deletar()" app-botao-deletar></button>

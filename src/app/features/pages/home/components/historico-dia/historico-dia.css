@@ -1,0 +1,21 @@
+:host {
+  border: 1px solid var(--box-border-color);
+  padding: 2rem;
+}
+
+.linha-titulo {
+  display: flex;
+}
+.titulo {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin: 0;
+}
+.lista-de-registros {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style-type: none;
+  padding: 0;
+  font-size: 0.6rem;
+}

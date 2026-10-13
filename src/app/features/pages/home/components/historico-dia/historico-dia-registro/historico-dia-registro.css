@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-columns: 3fr 4fr 1fr;
+}
+.area-valor-operacao {
+  /* min-width: 5rem; */
+  display: flex;
+  justify-content: space-between;
+}
+.area-valor-operacao.negativo {
+  color: var(--negative-text-color);
+}
+.area-valor-operacao span {
+  display: block;
+}
+.titulo-operacao {
+  word-break: break-all;
+  /* min-width: 10rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--weak-text-color);
+}

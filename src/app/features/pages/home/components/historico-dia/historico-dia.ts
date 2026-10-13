@@ -6,7 +6,7 @@ import { Operacoes } from '../../../../operacoes/operacoes';
 
 @Component({
   imports: [HistoricoDiaRegistro],
-  selector: 'app-historico-dia',
+  selector: 'div[app-historico-dia]',
   styleUrl: './historico-dia.css',
   templateUrl: './historico-dia.html',
 })

@@ -11,10 +11,15 @@
   --input-border-strong: #787878;
   --input-text-color: #525252;
   --input-focus-bg-color: #cacaca;
+  --box-border-color: #c4c4c4;
+  --negative-text-color: #d34141;
+  --weak-text-color: #787878;
+  --delete-button-text-color: #e52121;
 }
 
 body {
   background-color: var(--body-bg-color);
   margin: 0;
   padding: 0;
+  width: 100vw;
 }

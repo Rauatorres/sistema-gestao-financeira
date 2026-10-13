@@ -1,0 +1,12 @@
+:host {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: start;
+  width: fit-content;
+  height: fit-content;
+}
+.icon {
+  font-size: 1rem;
+  color: var(--delete-button-text-color);
+}
