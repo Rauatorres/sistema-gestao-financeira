@@ -4,12 +4,33 @@
 }
 
 .linha-titulo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  margin-bottom: 1rem;
+
+  @media (min-width: 420px) {
+    grid-template-columns: 2fr 7fr;
+  }
 }
-.titulo {
+.titulo-tab {
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    /* grid-template-columns: 2fr 8fr 1fr; */
+  }
+}
+.titulo-tab.nome {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 .lista-de-registros {
   display: flex;
@@ -18,4 +39,8 @@
   list-style-type: none;
   padding: 0;
   font-size: 0.6rem;
+
+  @media (min-width: 768px) {
+    gap: 2.5rem;
+  }
 }

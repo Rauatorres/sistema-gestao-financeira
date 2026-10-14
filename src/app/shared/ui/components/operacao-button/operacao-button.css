@@ -31,3 +31,17 @@
   font-size: 0.7rem;
   font-weight: 900;
 }
+
+/* @media (min-width: 468px) {
+  :host {
+    gap: 0.4rem;
+  }
+  .text {
+    font-size: 0.8rem;
+  }
+  .icon {
+    font-size: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+} */
