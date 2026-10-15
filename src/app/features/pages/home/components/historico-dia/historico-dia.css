@@ -1,6 +1,10 @@
 :host {
   border: 1px solid var(--box-border-color);
   padding: 2rem;
+
+  @media (min-width: 768px) {
+    padding: 4rem 3rem;
+  }
 }
 
 .linha-titulo {

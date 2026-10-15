@@ -18,12 +18,20 @@
     /* padding-top: 3rem;
     padding-bottom: 3rem; */
   }
+
+  @media (min-width: 768px) {
+    padding: 2rem 1.7rem;
+  }
 }
 
 .saldo-card-title {
   font-weight: 200;
   font-size: 1rem;
   margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .total-container {

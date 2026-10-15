@@ -1,5 +1,9 @@
 section {
   margin: 3rem 0;
+
+  @media (min-width: 768px) {
+    margin-top: 6rem;
+  }
 }
 
 .saldo-section {
@@ -16,11 +20,17 @@ section {
 
 .title {
   font-size: 1rem;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .section-title {
+  margin-bottom: 2rem;
   @media (min-width: 768px) {
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
   }
 }
@@ -31,23 +41,40 @@ section {
   gap: 1rem;
   margin: 1.5rem 0;
   width: 12rem;
+
+  @media (min-width: 768px) {
+    width: 15rem;
+  }
 }
 
 .saldo-input {
   font-size: 0.8rem;
   padding: 0.3rem 1rem;
   font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
 }
 
 .saldo-input.valor {
   width: 5rem;
   background-color: var(--input-focus-bg-color);
+
+  @media (min-width: 768px) {
+    width: 7rem;
+  }
 }
 
 .buttons-area {
   display: flex;
   justify-content: space-between;
   width: 12rem;
+
+  @media (min-width: 768px) {
+    width: 15rem;
+  }
 }
 
 @media (min-width: 468px) {
