@@ -19,6 +19,9 @@ import { HistoricoDia } from '../../../../../operacoes/historico-dia';
   selector: 'li[app-historico-dia-registro]',
   styleUrl: './historico-dia-registro.css',
   templateUrl: './historico-dia-registro.html',
+  host: {
+    '[class]': "this.tituloModoEditar() ? 'modo-editar' : ''",
+  },
 })
 export class HistoricoDiaRegistro {
   registro = input.required<OperacaoDia>();

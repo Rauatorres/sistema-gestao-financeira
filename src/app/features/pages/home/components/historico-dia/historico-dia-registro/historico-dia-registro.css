@@ -11,6 +11,18 @@
     /* grid-template-columns: 2fr 8fr 1fr; */
   }
 }
+:host.modo-editar {
+  @media (min-width: 1025px) {
+    /* grid-template-columns: 2fr 10fr 1fr; */
+  }
+}
+:host .area-valor-operacao,
+:host .area-botao-deletar {
+  @media (min-width: 768px) {
+    /* background-color: red; */
+    align-items: center;
+  }
+}
 .area-valor-operacao {
   /* min-width: 5rem; */
   display: flex;
@@ -22,8 +34,7 @@
 .area-valor-operacao span {
   display: block;
 }
-.titulo-operacao {
-  word-break: break-all;
+.titulo-operacao-area {
   /* min-width: 10rem; */
   padding-left: 1rem;
   padding-right: 1rem;
@@ -33,17 +44,38 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  /* @media (min-width: 1025px) {
+  } */
+}
+.titulo-operacao {
+  word-break: break-all;
+  display: block;
+
+  @media (min-width: 768px) {
+    padding: calc(0.8rem + 1px) 0;
+  }
+  /* height: 5rem; */
+  /* background-color: red; */
 }
 .titulo-input {
   all: unset;
   box-sizing: border-box;
   font-size: 0.6rem;
   border: 1px solid var(--weak-border-color);
-  padding: 0.5rem;
-  padding-bottom: 0;
-  padding-top: 0;
+  padding: 0 0.5rem;
+  /* padding-bottom: 0;
+  padding-top: 0; */
   border-radius: 0.1rem;
   width: 100%;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  /* @media screen {
+  } */
 }
 .area-botao-deletar {
   display: flex;

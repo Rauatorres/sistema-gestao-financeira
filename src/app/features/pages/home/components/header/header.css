@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   padding: 1rem 2.5rem;
 }
@@ -37,8 +38,10 @@ h1 {
 @media (min-width: 1025px) {
   :host {
     flex-direction: column;
+    justify-content: start;
     gap: 2rem;
-    padding: 1.3rem 1.5rem;
+    padding: 1.3rem 3rem;
+    width: auto;
   }
 
   h1 {

@@ -2,7 +2,7 @@
   <span>R$</span>
   <span>{{ registro().valor | valorOperacao }}</span>
 </span>
-<span class="titulo-operacao">
+<span class="titulo-operacao-area">
   @if (tituloModoEditar()) {
     <input
       class="titulo-input"
@@ -12,10 +12,10 @@
       [value]="registro().titulo"
     />
   } @else {
-    <span (click)="editarTitulo()">
+    <span class="titulo-operacao" (click)="editarTitulo()">
       {{ registro().titulo != '' ? registro().titulo : 'nenhum' }}
     </span>
-    <!-- <input type="text" /> -->
+    <!-- <input type="text" class="titulo-input" /> -->
   }
 </span>
 <span class="area-botao-deletar">

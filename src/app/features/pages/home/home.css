@@ -1,12 +1,16 @@
 :host {
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     display: flex;
   }
 }
 
 main {
   padding: 2rem;
+  width: 100%;
   @media (min-width: 768px) {
     padding: 2.7rem;
+  }
+  @media (min-width: 1025px) {
+    padding-left: 4rem;
   }
 }

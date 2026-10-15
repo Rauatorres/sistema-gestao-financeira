@@ -20,6 +20,7 @@
   }
 
   @media (min-width: 768px) {
+    /* width: 20%; */
     padding: 2rem 1.7rem;
   }
 }
@@ -32,6 +33,10 @@
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
+
+  @media (min-width: 1025px) {
+    font-size: 2rem;
+  }
 }
 
 .total-container {
@@ -40,6 +45,10 @@
   font-weight: 600;
   font-size: 1.2rem;
   margin: 0;
+
+  @media (min-width: 1025px) {
+    font-size: 1.8rem;
+  }
 }
 .total-container p {
   margin: 0;
