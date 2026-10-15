@@ -39,6 +39,9 @@
   padding-left: 1rem;
   padding-right: 1rem;
   color: var(--weak-text-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
   @media (min-width: 768px) {
     padding-left: 3rem;
@@ -51,12 +54,17 @@
 .titulo-operacao {
   word-break: break-all;
   display: block;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     padding: calc(0.8rem + 1px) 0;
   }
-  /* height: 5rem; */
-  /* background-color: red; */
+}
+.titulo-operacao:hover,
+.editar-icon {
+  color: black;
+}
+.editar-icon {
 }
 .titulo-input {
   all: unset;

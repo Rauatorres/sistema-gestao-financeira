@@ -12,9 +12,17 @@
       [value]="registro().titulo"
     />
   } @else {
-    <span class="titulo-operacao" (click)="editarTitulo()">
+    <span
+      class="titulo-operacao"
+      (click)="editarTitulo()"
+      (mouseenter)="isTituloOperacaoHover.set(true)"
+      (mouseleave)="isTituloOperacaoHover.set(false)"
+    >
       {{ registro().titulo != '' ? registro().titulo : 'nenhum' }}
     </span>
+    <!-- @if (isTituloOperacaoHover()) { -->
+    <mat-icon class="editar-icon">edit</mat-icon>
+    <!-- } -->
     <!-- <input type="text" class="titulo-input" /> -->
   }
 </span>

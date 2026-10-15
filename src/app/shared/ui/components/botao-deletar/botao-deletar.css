@@ -3,15 +3,15 @@
   border: none;
   display: flex;
   justify-content: start;
-  /* text-align: end; */
   align-items: start;
   width: fit-content;
   height: fit-content;
+  cursor: pointer;
 }
 .icon {
   font-size: 1rem;
   color: var(--delete-button-text-color);
-  /* margin: auto; */
+
   @media (min-width: 768px) {
     font-size: 1.8rem;
     width: 1.8rem;
