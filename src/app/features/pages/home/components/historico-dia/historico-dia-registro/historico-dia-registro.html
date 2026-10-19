@@ -21,7 +21,9 @@
       {{ registro().titulo != '' ? registro().titulo : 'nenhum' }}
     </span>
     <!-- @if (isTituloOperacaoHover()) { -->
-    <mat-icon class="editar-icon">edit</mat-icon>
+    <mat-icon [style.display]="isTituloOperacaoHover() ? 'block' : 'none'" class="editar-icon"
+      >edit</mat-icon
+    >
     <!-- } -->
     <!-- <input type="text" class="titulo-input" /> -->
   }
