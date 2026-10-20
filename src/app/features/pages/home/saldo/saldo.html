@@ -8,8 +8,8 @@
         <input
           class="valor-input"
           type="number"
-          /* min="0.01"
-          step="0.01" */
+          min="0.01"
+          step="0.01"
           [(ngModel)]="valorString"
           (ngModelChange)="aoMudarValor($event)"
           /* (change)="onchangeValor()" */
@@ -32,6 +32,7 @@
         type="text"
         name="titulo"
         [(ngModel)]="operacao.titulo"
+        placeholder="Título"
         app-input
       />
     </div>

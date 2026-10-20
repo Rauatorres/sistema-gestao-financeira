@@ -79,8 +79,14 @@ section {
   text-align: right;
   width: 3rem;
   @media (min-width: 768px) {
-    width: 7rem;
+    /* width: 7rem; */
   }
+}
+.valor-input::-webkit-outer-spin-button,
+.valor-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
 }
 
 .indicador-moeda-input {
@@ -88,6 +94,7 @@ section {
   /* display: block; */
   /* left: 3rem; */
   /* margin-left: -7rem; */
+  cursor: default;
 }
 
 .buttons-area {
