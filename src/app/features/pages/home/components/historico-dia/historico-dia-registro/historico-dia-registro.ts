@@ -33,7 +33,12 @@ export class HistoricoDiaRegistro {
   isTituloOperacaoHover = signal(false);
 
   deletar() {
-    this.onDeletar.emit(this.registro());
+    const confirmarDeletar = confirm(
+      "Você realmente deseja excluir a operação '" + this.registro().titulo + ' ?',
+    );
+    if (confirmarDeletar) {
+      this.onDeletar.emit(this.registro());
+    }
   }
 
   editarTitulo() {
