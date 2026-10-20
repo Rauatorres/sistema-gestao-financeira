@@ -1,1 +1,54 @@
-<p>historico works!</p>
+<section>
+  <h2>Histórico de transações</h2>
+  <form>
+    <h3>Por data</h3>
+    <label for="">
+      <p>Dia</p>
+      <input type="number" app-input />
+    </label>
+    <label for="">
+      <p>Mês</p>
+      <input type="number" app-input />
+    </label>
+    <label for="">
+      <p>Ano</p>
+      <input type="number" app-input />
+    </label>
+  </form>
+  <form>
+    <h3>Filtrar</h3>
+    <div>
+      <label for="">
+        <input type="radio" name="filtrar" id="" value="todos" checked />
+        <p>Todos</p>
+      </label>
+      <label for="">
+        <input type="radio" name="filtrar" id="" value="dia" />
+        <p>Apenas o dia</p>
+      </label>
+      <label for="">
+        <input type="radio" name="filtrar" id="" value="mes" />
+        <p>Por mês</p>
+      </label>
+    </div>
+  </form>
+</section>
+<section>
+  <div>
+    <div>
+      <div>Valor (R$)</div>
+      <div>Título</div>
+      <div>Data</div>
+    </div>
+    <ul>
+      @for (registro of registros; track registro.id) {
+        <li>
+          <span>{{ registro.valor }}</span>
+          <span>{{ registro.titulo }}</span>
+          <span>{{ registro.data | dateToString }}</span>
+        </li>
+      }
+    </ul>
+    <button>Mostrar mais <mat-icon>arrow_drop_down</mat-icon></button>
+  </div>
+</section>
