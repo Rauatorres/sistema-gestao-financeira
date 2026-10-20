@@ -62,13 +62,32 @@ section {
   }
 }
 
-.saldo-input.valor {
-  width: 5rem;
+.input-box {
+  border: 1px solid var(--input-border-strong);
+  color: var(--input-text-color);
+  border-radius: 0.3rem;
   background-color: var(--input-focus-bg-color);
 
+  display: flex;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.valor-input {
+  all: unset;
+  /* background-color: red; */
+  text-align: right;
+  width: 3rem;
   @media (min-width: 768px) {
     width: 7rem;
   }
+}
+
+.indicador-moeda-input {
+  /* position: absolute; */
+  /* display: block; */
+  /* left: 3rem; */
+  /* margin-left: -7rem; */
 }
 
 .buttons-area {
