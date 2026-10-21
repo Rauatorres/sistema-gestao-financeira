@@ -3,61 +3,64 @@
   <form>
     <h3>Por data</h3>
     <div class="input-container">
-      <label for="">
+      <label for="dia">
         <p>Dia</p>
         <input
-          [(ngModel)]="filtroData.dia"
-          /* (ngModelChange)="aoMudarData($event)" */
+          id="dia"
+          (input)="aoDigitarDia($event)"
           type="number"
           max="31"
           min="1"
           name="dia"
           app-input
+          [placeholder]="placeholder.dia"
         />
       </label>
-      <label for="">
+      <label for="mes">
         <p>Mês</p>
         <input
-          [(ngModel)]="filtroData.mes"
-          /* (ngModelChange)="aoMudarData($event)" */
+          id="mes"
           (input)="aoDigitarMes($event)"
           type="number"
           max="12"
           min="1"
           name="mes"
           app-input
+          [placeholder]="placeholder.mes"
         />
       </label>
-      <label for="">
+      <label for="ano">
         <p>Ano</p>
         <input
-          [(ngModel)]="filtroData.ano"
-          /* (ngModelChange)="aoMudarData($event)" */
+          [(ngModel)]="dataSelecionada().ano"
+          /* (ngModelChange)="aoDigitarAno($event)" */
+          id="anoano"
           name="ano"
           type="number"
           min="2026"
           app-input
+          [placeholder]="placeholder.ano"
         />
       </label>
     </div>
   </form>
-  <form>
+  <!-- <form>
     <h3>Filtrar</h3>
     <div class="input-container">
-      <label for="">
-        <input type="radio" name="filtrar" id="" value="todos" checked />
-        <p>Todos</p>
+      <label for="tudo" (click)="filtrar('tudo')">
+        <input type="radio" name="filtrar" id="tudo" checked />
+        <p>Tudo</p>
       </label>
-      <label for="">
-        <input type="radio" name="filtrar" id="" value="dia" />
+      <label for="dia" (click)="filtrar('dia')">
+        <input type="radio" name="filtrar" id="dia" />
         <p>Apenas o dia</p>
       </label>
-      <label for="">
-        <input type="radio" name="filtrar" id="" value="mes" />
+      <label for="mes" (click)="filtrar('mes')">
+        <input type="radio" name="filtrar" id="mes" />
         <p>Apenas o mês</p>
       </label>
     </div>
-  </form>
+  </form> -->
 </section>
 <section>
   <div>
@@ -67,7 +70,7 @@
       <div class="celula-tabela-historico">Data</div>
     </div>
     <ul class="lista-registros">
-      @for (registro of registros; track registro.id) {
+      @for (registro of registrosFiltrados(); track registro.id) {
         <li class="linha-tabela-historico">
           <span class="celula-tabela-historico">{{ registro.valor }}</span>
           <span class="celula-tabela-historico">{{ registro.titulo }}</span>

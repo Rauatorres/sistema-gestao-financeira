@@ -26,7 +26,7 @@ export class RegistrosHistorico {
       id: '4',
       valor: 500000,
       titulo: 'teste',
-      data: new Date('2026-10-15'),
+      data: new Date('2027-10-15'),
     },
   ];
 }

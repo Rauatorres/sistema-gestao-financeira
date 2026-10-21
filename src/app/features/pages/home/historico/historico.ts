@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { Input } from '../../../../shared/ui/components/input/input';
 import { RegistrosHistorico } from './registros-historico';
@@ -15,44 +15,82 @@ export class Historico {
   private registrosHistoricoService = inject(RegistrosHistorico);
   registros = this.registrosHistoricoService.registros;
   private date = new Date();
-  filtroData = {
+  dataSelecionada = signal({
+    dia: '',
+    mes: '',
+    ano: '',
+  });
+  placeholder = {
     dia: this.date.getDate().toString(),
     mes: (this.date.getMonth() + 1).toString(),
     ano: this.date.getFullYear().toString(),
   };
+  // filtro = signal<'tudo' | 'dia' | 'mes'>('tudo');
 
-  // aoMudarData(valor: string) {
-  //   // console.log(this.filtroData.dia());
-  //   let { dia, mes, ano } = this.filtroData;
-  //   if (+mes > 12) {
-  //     this.filtroData.mes = '12';
-  //   }
-  //   // console.log(mes);
-  //   // console.log(+mes);
-  //   // console.log(+mes < 1);
-  //   if (+mes < 1 && mes != null) {
-  //     this.filtroData.mes = '1';
-  //     console.log(this.filtroData.mes);
-  //     // valor = '1';
-  //   }
-  // }
+  get registrosFiltrados() {
+    return computed(() =>
+      this.registros.filter((registro) => {
+        if (this.dataSelecionada().ano != '') {
+          if (this.dataSelecionada().mes != '') {
+            if (this.dataSelecionada().dia != '') {
+              return (
+                registro.data.getFullYear().toString() == this.dataSelecionada().ano &&
+                registro.data.getMonth().toString() == this.dataSelecionada().mes &&
+                registro.data.getDate().toString() == this.dataSelecionada().dia
+              );
+            }
+
+            return (
+              registro.data.getFullYear().toString() == this.dataSelecionada().ano &&
+              registro.data.getMonth().toString() == this.dataSelecionada().mes
+            );
+          }
+
+          return registro.data.getFullYear().toString() == this.dataSelecionada().ano;
+        } else {
+          return this.registros;
+        }
+      }),
+    );
+  }
+
+  aoDigitarDia(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const valor = input.value;
+
+    if (valor != '' && Number(valor) < 1) {
+      input.value = '1';
+    }
+
+    if (Number(valor) > 31) {
+      input.value = '31';
+    }
+
+    this.dataSelecionada.update((current) => ({ ...current, dia: valor }));
+  }
 
   aoDigitarMes(event: Event) {
     const input = event.target as HTMLInputElement;
     const valor = input.value;
 
     if (valor !== '' && Number(valor) < 1) {
-      this.filtroData.mes = '1';
+      this.dataSelecionada.update((current) => ({ ...current, mes: '1' }));
+
       input.value = '1';
       return;
     }
 
     if (Number(valor) > 12) {
-      this.filtroData.mes = '12';
+      this.dataSelecionada.update((current) => ({ ...current, mes: '12' }));
+
       input.value = '12';
       return;
     }
 
-    this.filtroData.mes = valor;
+    this.dataSelecionada.update((current) => ({ ...current, mes: valor }));
   }
+
+  // filtrar(valor: 'tudo' | 'dia' | 'mes') {
+  //   this.filtro.set(valor);
+  // }
 }
