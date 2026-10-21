@@ -1,0 +1,27 @@
+.section-title {
+  font-size: 1rem;
+  margin: 3rem 0;
+}
+
+.input-container {
+  display: flex;
+}
+
+.linha-tabela-historico {
+  display: grid;
+  grid-template-columns: 5rem auto 6rem;
+}
+
+.area-titulo-tabela-historico div {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.lista-registros {
+  list-style-type: none;
+  padding: 0;
+}
+
+.celula-tabela-historico {
+  word-break: break-all;
+}

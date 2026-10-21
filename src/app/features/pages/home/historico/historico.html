@@ -1,23 +1,25 @@
 <section>
-  <h2>Histórico de transações</h2>
+  <h2 class="section-title">Histórico de transações</h2>
   <form>
     <h3>Por data</h3>
-    <label for="">
-      <p>Dia</p>
-      <input type="number" app-input />
-    </label>
-    <label for="">
-      <p>Mês</p>
-      <input type="number" app-input />
-    </label>
-    <label for="">
-      <p>Ano</p>
-      <input type="number" app-input />
-    </label>
+    <div class="input-container">
+      <label for="">
+        <p>Dia</p>
+        <input type="number" max="31" min="1" app-input />
+      </label>
+      <label for="">
+        <p>Mês</p>
+        <input type="number" max="12" min="1" app-input />
+      </label>
+      <label for="">
+        <p>Ano</p>
+        <input type="number" min="2026" app-input />
+      </label>
+    </div>
   </form>
   <form>
     <h3>Filtrar</h3>
-    <div>
+    <div class="input-container">
       <label for="">
         <input type="radio" name="filtrar" id="" value="todos" checked />
         <p>Todos</p>
@@ -28,24 +30,24 @@
       </label>
       <label for="">
         <input type="radio" name="filtrar" id="" value="mes" />
-        <p>Por mês</p>
+        <p>Apenas o mês</p>
       </label>
     </div>
   </form>
 </section>
 <section>
   <div>
-    <div>
-      <div>Valor (R$)</div>
-      <div>Título</div>
-      <div>Data</div>
+    <div class="linha-tabela-historico area-titulo-tabela-historico">
+      <div class="celula-tabela-historico">Valor (R$)</div>
+      <div class="celula-tabela-historico">Título</div>
+      <div class="celula-tabela-historico">Data</div>
     </div>
-    <ul>
+    <ul class="lista-registros">
       @for (registro of registros; track registro.id) {
-        <li>
-          <span>{{ registro.valor }}</span>
-          <span>{{ registro.titulo }}</span>
-          <span>{{ registro.data | dateToString }}</span>
+        <li class="linha-tabela-historico">
+          <span class="celula-tabela-historico">{{ registro.valor }}</span>
+          <span class="celula-tabela-historico">{{ registro.titulo }}</span>
+          <span class="celula-tabela-historico">{{ registro.data | dateToString }}</span>
         </li>
       }
     </ul>
