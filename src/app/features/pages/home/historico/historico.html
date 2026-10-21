@@ -5,15 +5,39 @@
     <div class="input-container">
       <label for="">
         <p>Dia</p>
-        <input type="number" max="31" min="1" app-input />
+        <input
+          [(ngModel)]="filtroData.dia"
+          /* (ngModelChange)="aoMudarData($event)" */
+          type="number"
+          max="31"
+          min="1"
+          name="dia"
+          app-input
+        />
       </label>
       <label for="">
         <p>Mês</p>
-        <input type="number" max="12" min="1" app-input />
+        <input
+          [(ngModel)]="filtroData.mes"
+          /* (ngModelChange)="aoMudarData($event)" */
+          (input)="aoDigitarMes($event)"
+          type="number"
+          max="12"
+          min="1"
+          name="mes"
+          app-input
+        />
       </label>
       <label for="">
         <p>Ano</p>
-        <input type="number" min="2026" app-input />
+        <input
+          [(ngModel)]="filtroData.ano"
+          /* (ngModelChange)="aoMudarData($event)" */
+          name="ano"
+          type="number"
+          min="2026"
+          app-input
+        />
       </label>
     </div>
   </form>
