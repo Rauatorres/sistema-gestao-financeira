@@ -91,10 +91,6 @@ export class Historico {
     this.dataSelecionada.update((current) => ({ ...current, mes: valor }));
   }
 
-  // isNegativo(valor: number) {
-  //   return valor < 0;
-  // }
-
   // filtrar(valor: 'tudo' | 'dia' | 'mes') {
   //   this.filtro.set(valor);
   // }

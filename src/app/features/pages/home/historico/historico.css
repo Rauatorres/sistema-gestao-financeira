@@ -89,3 +89,63 @@ section {
   border-radius: 0.7rem;
   font-weight: 600;
 }
+
+.mostrar-mais-button .icon {
+  display: flex;
+  align-items: center;
+  height: 0.8rem;
+  /* font-size: 1.2rem; */
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin: 6rem 0;
+  }
+
+  .form-title,
+  .input-title,
+  .selecionar-data-input,
+  .lista-registros,
+  .mostrar-mais-button {
+    font-size: 0.9rem;
+  }
+
+  .form-title {
+    margin: 1.2rem 0;
+  }
+
+  .input-container {
+    gap: 1.3rem;
+  }
+
+  .input-title {
+    margin: 0.5rem 0;
+    padding: 0 0.3rem;
+  }
+
+  .selecionar-data-input {
+    padding: 0.4rem 0.7rem;
+  }
+
+  .area-titulo-tabela-historico {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .lista-registros {
+    gap: 2rem;
+  }
+
+  .linha-tabela-historico {
+    grid-template-columns: 9rem auto 11rem;
+  }
+
+  .mostrar-mais-button {
+    padding: 0.5rem 2rem;
+  }
+  .mostrar-mais-button .icon {
+    height: 1.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
