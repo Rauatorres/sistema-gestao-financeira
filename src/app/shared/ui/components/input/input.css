@@ -4,3 +4,7 @@
   color: var(--input-text-color);
   border-radius: 0.3rem;
 }
+
+:host:focus {
+  background-color: var(--input-focus-bg-color);
+}

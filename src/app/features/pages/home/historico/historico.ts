@@ -4,9 +4,10 @@ import { Input } from '../../../../shared/ui/components/input/input';
 import { RegistrosHistorico } from './registros-historico';
 import { DateToStringPipe } from '../../../../shared/pipes/date-to-string-pipe';
 import { FormsModule } from '@angular/forms';
+import { ValorOperacaoPipe } from '../../../../shared/pipes/valor-operacao-pipe';
 
 @Component({
-  imports: [MatIcon, Input, DateToStringPipe, FormsModule],
+  imports: [MatIcon, Input, DateToStringPipe, FormsModule, ValorOperacaoPipe],
   selector: 'app-historico',
   styleUrl: './historico.css',
   templateUrl: './historico.html',
@@ -30,19 +31,19 @@ export class Historico {
   get registrosFiltrados() {
     return computed(() =>
       this.registros.filter((registro) => {
-        if (this.dataSelecionada().ano != '') {
-          if (this.dataSelecionada().mes != '') {
-            if (this.dataSelecionada().dia != '') {
+        if (this.dataSelecionada().ano != '' && this.dataSelecionada().ano != null) {
+          if (this.dataSelecionada().mes != '' && this.dataSelecionada().mes != null) {
+            if (this.dataSelecionada().dia != '' && this.dataSelecionada().dia != null) {
               return (
                 registro.data.getFullYear().toString() == this.dataSelecionada().ano &&
-                registro.data.getMonth().toString() == this.dataSelecionada().mes &&
+                (registro.data.getMonth() + 1).toString() == this.dataSelecionada().mes &&
                 registro.data.getDate().toString() == this.dataSelecionada().dia
               );
             }
 
             return (
               registro.data.getFullYear().toString() == this.dataSelecionada().ano &&
-              registro.data.getMonth().toString() == this.dataSelecionada().mes
+              (registro.data.getMonth() + 1).toString() == this.dataSelecionada().mes
             );
           }
 
@@ -89,6 +90,10 @@ export class Historico {
 
     this.dataSelecionada.update((current) => ({ ...current, mes: valor }));
   }
+
+  // isNegativo(valor: number) {
+  //   return valor < 0;
+  // }
 
   // filtrar(valor: 'tudo' | 'dia' | 'mes') {
   //   this.filtro.set(valor);

@@ -1,11 +1,12 @@
 <section>
   <h2 class="section-title">Histórico de transações</h2>
-  <form>
-    <h3>Por data</h3>
+  <form class="selecionar-data-form">
+    <h3 class="form-title">Por data</h3>
     <div class="input-container">
       <label for="dia">
-        <p>Dia</p>
+        <p class="input-title">Dia</p>
         <input
+          class="selecionar-data-input"
           id="dia"
           (input)="aoDigitarDia($event)"
           type="number"
@@ -17,8 +18,9 @@
         />
       </label>
       <label for="mes">
-        <p>Mês</p>
+        <p class="input-title">Mês</p>
         <input
+          class="selecionar-data-input"
           id="mes"
           (input)="aoDigitarMes($event)"
           type="number"
@@ -30,8 +32,9 @@
         />
       </label>
       <label for="ano">
-        <p>Ano</p>
+        <p class="input-title">Ano</p>
         <input
+          class="selecionar-data-input ano"
           [(ngModel)]="dataSelecionada().ano"
           /* (ngModelChange)="aoDigitarAno($event)" */
           id="anoano"
@@ -44,23 +47,6 @@
       </label>
     </div>
   </form>
-  <!-- <form>
-    <h3>Filtrar</h3>
-    <div class="input-container">
-      <label for="tudo" (click)="filtrar('tudo')">
-        <input type="radio" name="filtrar" id="tudo" checked />
-        <p>Tudo</p>
-      </label>
-      <label for="dia" (click)="filtrar('dia')">
-        <input type="radio" name="filtrar" id="dia" />
-        <p>Apenas o dia</p>
-      </label>
-      <label for="mes" (click)="filtrar('mes')">
-        <input type="radio" name="filtrar" id="mes" />
-        <p>Apenas o mês</p>
-      </label>
-    </div>
-  </form> -->
 </section>
 <section>
   <div>
@@ -72,12 +58,16 @@
     <ul class="lista-registros">
       @for (registro of registrosFiltrados(); track registro.id) {
         <li class="linha-tabela-historico">
-          <span class="celula-tabela-historico">{{ registro.valor }}</span>
-          <span class="celula-tabela-historico">{{ registro.titulo }}</span>
-          <span class="celula-tabela-historico">{{ registro.data | dateToString }}</span>
+          <span class="celula-tabela-historico" [class.negativo]="registro.valor < 0">{{
+            registro.valor | valorOperacao
+          }}</span>
+          <span class="celula-tabela-historico titulo-do-registro">{{ registro.titulo }}</span>
+          <span class="celula-tabela-historico data-do-registro">{{
+            registro.data | dateToString
+          }}</span>
         </li>
       }
     </ul>
-    <button>Mostrar mais <mat-icon>arrow_drop_down</mat-icon></button>
   </div>
+  <button class="mostrar-mais-button">Mostrar mais <mat-icon>arrow_drop_down</mat-icon></button>
 </section>
