@@ -22,5 +22,5 @@ body {
   background-color: var(--body-bg-color);
   margin: 0;
   padding: 0;
-  width: auto;
+  width: 100vw;
 }

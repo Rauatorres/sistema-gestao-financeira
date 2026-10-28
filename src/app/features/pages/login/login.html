@@ -1,1 +1,44 @@
-<p>login works!</p>
+<section>
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <h1>Bem vindo ao seu app de gestão financeira</h1>
+    <div>
+      <label for="nome">
+        <h2 class="input-title">Nome de usuário</h2>
+        <div>
+          <input type="text" name="senha" id="nome" formControlName="nome" placeholder="nome" />
+          <mat-icon>person</mat-icon>
+        </div>
+      </label>
+      <div>
+        @if (isNomeInvalido) {
+          <p>O campo 'Nome' não pode estar vazio</p>
+        }
+      </div>
+    </div>
+    <div>
+      <label for="senha">
+        <h2 class="input-title">Senha</h2>
+        <div>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="senha"
+            formControlName="senha"
+          />
+          <mat-icon>lock</mat-icon>
+        </div>
+      </label>
+      <div>
+        @if (isSenhaInvalida) {
+          <p>O campo 'Senha' não pode estar vazio</p>
+        }
+      </div>
+    </div>
+
+    <p>*o nome de usuário ou senha está incorreto</p>
+
+    <button type="submit">Login</button>
+    <a routerLink="/cadastrar">Cadastrar</a>
+  </form>
+</section>
