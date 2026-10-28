@@ -40,6 +40,13 @@ section {
   width: 4rem;
 }
 
+.selecionar-data-input::-webkit-outer-spin-button,
+.selecionar-data-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .linha-tabela-historico {
   display: grid;
   grid-template-columns: 5rem auto 6rem;
@@ -88,6 +95,7 @@ section {
   font-size: 0.8rem;
   border-radius: 0.7rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .mostrar-mais-button .icon {

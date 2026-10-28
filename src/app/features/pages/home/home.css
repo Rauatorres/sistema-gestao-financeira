@@ -12,6 +12,6 @@ main {
   }
   @media (min-width: 1025px) {
     padding-left: 4rem;
-    /* width: fit-content; */
+    width: 100%;
   }
 }

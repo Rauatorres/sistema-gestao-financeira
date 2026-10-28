@@ -1,20 +1,24 @@
 :host {
   display: grid;
-  grid-template-columns: 3fr 5fr 1fr;
+  grid-template-columns: 4rem auto 1rem;
+  gap: 0.5rem;
 
   @media (min-width: 420px) {
-    grid-template-columns: 2fr 6fr 1fr;
+    grid-template-columns: 5rem auto 1rem;
   }
 
   @media (min-width: 768px) {
     font-size: 1.2rem;
+    grid-template-columns: 8rem auto 1rem;
     /* grid-template-columns: 2fr 8fr 1fr; */
+    /* width: 100%; */
+  }
+  @media (min-width: 1025px) {
+    /* grid-template-columns: 2fr 10fr 1fr; */
+    width: 100%;
   }
 }
 :host.modo-editar {
-  @media (min-width: 1025px) {
-    /* grid-template-columns: 2fr 10fr 1fr; */
-  }
 }
 :host .area-valor-operacao,
 :host .area-botao-deletar {
@@ -49,6 +53,8 @@
   }
 
   /* @media (min-width: 1025px) {
+    padding-left: 0;
+    padding-righ: 0;
   } */
 }
 .titulo-operacao {
