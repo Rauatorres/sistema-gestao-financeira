@@ -8,9 +8,10 @@ import {
   Validators,
   ɵInternalFormsSharedModule,
 } from '@angular/forms';
+import { Input } from '../../../shared/ui/components/input/input';
 
 @Component({
-  imports: [RouterLink, MatIcon, ReactiveFormsModule],
+  imports: [RouterLink, MatIcon, ReactiveFormsModule, Input],
   selector: 'app-login',
   styleUrl: './login.css',
   templateUrl: './login.html',
