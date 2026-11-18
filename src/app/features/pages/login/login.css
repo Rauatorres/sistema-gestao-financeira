@@ -11,22 +11,36 @@
 }
 
 .input-area {
-  background-color: red;
-  margin-bottom: 2rem;
+  /* background-color: red; */
+  margin-bottom: 1.8rem;
 }
 .input-title,
 .login-form input {
   font-size: 0.8rem;
   margin: 0;
 }
+.input-title {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
 .input-box {
-  background-color: blue;
+  /* background-color: blue; */
+  position: relative;
 }
 .login-form input {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   color: var(--input-text-color);
   font-weight: 500;
   width: 100%;
+}
+.input-icon {
+  position: absolute;
+  /* left: 0; */
+  top: 0.6rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 .button {
