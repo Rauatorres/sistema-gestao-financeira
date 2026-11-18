@@ -10,6 +10,30 @@
   padding: 1.7rem;
 }
 
+.input-area {
+  background-color: red;
+  margin-bottom: 2rem;
+}
+.input-title,
+.login-form input {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.input-box {
+  background-color: blue;
+}
+.login-form input {
+  padding: 0.4rem 1rem;
+  color: var(--input-text-color);
+  font-weight: 500;
+  width: 100%;
+}
+
 .button {
   display: block;
 }
+
+/* input.ng-invalid {
+  background-color: rgb(236, 191, 180);
+  border-color: rgb(236, 61, 61);
+} */

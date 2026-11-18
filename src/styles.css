@@ -17,6 +17,7 @@
   --delete-button-text-color: #e52121;
   --weak-border-color: #bfbfbf;
   --userauth-pages-background-body-color: #efefef;
+  --error-msg-text-color: #ad3621;
 }
 
 body {
@@ -24,8 +25,4 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-}
-
-.invalid-message {
-  color: var(--negative-text-color);
 }

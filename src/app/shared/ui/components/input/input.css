@@ -8,3 +8,8 @@
 :host:focus {
   background-color: var(--input-focus-bg-color);
 }
+
+:host.ng-invalid {
+  background-color: rgb(236, 191, 180);
+  border-color: rgb(209, 41, 41);
+}

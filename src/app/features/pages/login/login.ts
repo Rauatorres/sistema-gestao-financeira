@@ -9,9 +9,10 @@ import {
   ɵInternalFormsSharedModule,
 } from '@angular/forms';
 import { Input } from '../../../shared/ui/components/input/input';
+import { InvalidMessage } from '../../../shared/ui/directives/invalid-message';
 
 @Component({
-  imports: [RouterLink, MatIcon, ReactiveFormsModule, Input],
+  imports: [RouterLink, MatIcon, ReactiveFormsModule, Input, InvalidMessage],
   selector: 'app-login',
   styleUrl: './login.css',
   templateUrl: './login.html',
@@ -27,11 +28,19 @@ export class Login {
   });
 
   get isNomeInvalido() {
-    return this.form.controls.nome.invalid && this.form.controls.nome.touched;
+    return (
+      this.form.controls.nome.invalid &&
+      this.form.controls.nome.touched &&
+      this.form.controls.nome.dirty
+    );
   }
 
   get isSenhaInvalida() {
-    return this.form.controls.senha.invalid && this.form.controls.senha.touched;
+    return (
+      this.form.controls.senha.invalid &&
+      this.form.controls.senha.touched &&
+      this.form.controls.senha.dirty
+    );
   }
 
   onSubmit() {
