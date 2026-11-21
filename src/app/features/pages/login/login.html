@@ -1,6 +1,6 @@
 <section class="main-section">
   <form class="login-form" [formGroup]="form" (submit)="onSubmit()">
-    <h1>Bem vindo ao seu app de gestão financeira</h1>
+    <h1 class="form-title">Bem vindo ao seu app de gestão financeira</h1>
     <div class="input-area">
       <label for="nome">
         <h2 class="input-title">Nome de usuário</h2>
@@ -48,7 +48,7 @@
       <p appInvalidMessage>*o nome de usuário ou senha está incorreto</p>
     </div>
 
-    <button class="button" type="submit">Login</button>
-    <a class="button" routerLink="/cadastrar">Cadastrar</a>
+    <button class="button main" type="submit">Login</button>
+    <a class="button normal" routerLink="/cadastrar">Cadastrar</a>
   </form>
 </section>

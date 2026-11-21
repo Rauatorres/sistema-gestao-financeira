@@ -8,10 +8,16 @@
   box-shadow: 1px 1px 7px rgb(0, 0, 0, 0.3);
   border-radius: 0.8rem;
   padding: 1.7rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.form-title {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
 }
 
 .input-area {
-  /* background-color: red; */
   margin-bottom: 1.8rem;
 }
 .input-title,
@@ -24,7 +30,6 @@
   margin-left: 0.5rem;
 }
 .input-box {
-  /* background-color: blue; */
   position: relative;
 }
 .login-form input {
@@ -35,7 +40,6 @@
 }
 .input-icon {
   position: absolute;
-  /* left: 0; */
   top: 0.6rem;
   right: 1rem;
   font-size: 1.2rem;
@@ -44,10 +48,34 @@
 }
 
 .button {
-  display: block;
+  all: unset;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 2rem 0;
+  border-radius: 0.3rem;
 }
 
-/* input.ng-invalid {
-  background-color: rgb(236, 191, 180);
-  border-color: rgb(236, 61, 61);
-} */
+.button.main {
+  background-color: var(--main-card-bg-color);
+  color: white;
+}
+.button.normal {
+  background-color: var(--navlink-bg-color);
+}
+
+@media (min-width: 768px) {
+  .main-section {
+    padding: 3rem 5rem;
+  }
+  .login-form {
+    padding: 2.5rem 5rem;
+  }
+  .form-title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
