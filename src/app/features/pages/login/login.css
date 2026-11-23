@@ -69,13 +69,33 @@
 
 @media (min-width: 768px) {
   .main-section {
-    padding: 3rem 5rem;
+    padding: 3rem 7rem;
   }
+
   .login-form {
     padding: 2.5rem 5rem;
+    /* width: 25rem; */
   }
   .form-title {
     font-size: 2rem;
     line-height: 2.2rem;
+  }
+
+  .input-area {
+    margin-bottom: 2.5rem;
+  }
+  .input-title,
+  .login-form input {
+    font-size: 1.1rem;
+  }
+  .input-title {
+    margin-bottom: 1rem;
+  }
+  .login-form input {
+    padding: 1rem;
+  }
+  .input-icon {
+    font-size: 1.5rem;
+    top: 0.9rem;
   }
 }
