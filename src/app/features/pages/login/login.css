@@ -98,4 +98,9 @@
     font-size: 1.5rem;
     top: 0.9rem;
   }
+  .button {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    margin: 2.5rem 0;
+  }
 }
