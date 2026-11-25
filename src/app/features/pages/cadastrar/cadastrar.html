@@ -1,1 +1,77 @@
-<p>cadastrar works!</p>
+<section class="user-auth-form main-section">
+  <form class="login-form" [formGroup]="form" (submit)="onSubmit()">
+    <h1 class="form-title">Bem vindo ao seu app de gestão financeira</h1>
+    <div class="input-area">
+      <label for="nome">
+        <h2 class="input-title">Nome de usuário</h2>
+        <div class="input-box">
+          <input
+            app-input
+            type="text"
+            name="senha"
+            id="nome"
+            formControlName="nome"
+            placeholder="nome"
+          />
+        </div>
+      </label>
+      <div>
+        @if (isNomeInvalido) {
+          <!-- <p class="invalid-message">O campo 'Nome' não pode estar vazio</p> -->
+          <p appInvalidMessage>O campo 'Nome' não pode estar vazio</p>
+        }
+      </div>
+    </div>
+
+    <div class="password-inputs-group" formGroupName="senhaGroup">
+      <div class="input-area">
+        <label for="senha">
+          <h2 class="input-title">Senha</h2>
+          <div class="input-box">
+            <input
+              app-input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="senha"
+              formControlName="senha"
+            />
+          </div>
+        </label>
+        <div>
+          @if (isSenhaInvalida) {
+            <p appInvalidMessage>O campo 'Senha' não pode estar vazio</p>
+          }
+        </div>
+      </div>
+      <div class="input-area">
+        <label for="confirmar_senha">
+          <h2 class="input-title">Confirmar senha</h2>
+          <div class="input-box">
+            <input
+              app-input
+              type="password"
+              name="confirmar_senha"
+              id="confirmar_senha"
+              placeholder="confirmar senha"
+              formControlName="confirmarSenha"
+              [class.ng-invalid]="isConfirmarSenhaInvalido"
+            />
+          </div>
+        </label>
+        <div>
+          @if (isConfirmarSenhaInvalido) {
+            <p appInvalidMessage>As duas senhas tem que ser iguais</p>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p appInvalidMessage>*o nome de usuário ou senha está incorreto</p>
+    </div>
+
+    <button class="button main" type="submit">Cadastrar</button>
+    <a class="button normal" routerLink="/">Voltar para login</a>
+  </form>
+</section>
