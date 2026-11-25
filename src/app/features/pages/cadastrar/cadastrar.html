@@ -71,7 +71,7 @@
       <p appInvalidMessage>*o nome de usuário ou senha está incorreto</p>
     </div>
 
-    <button class="button main" type="submit">Cadastrar</button>
+    <button class="button main" type="submit" [disabled]="!form.valid">Cadastrar</button>
     <a class="button normal" routerLink="/">Voltar para login</a>
   </form>
 </section>

@@ -49,7 +49,7 @@
       <p appInvalidMessage>*o nome de usuário ou senha está incorreto</p>
     </div>
 
-    <button class="button main" type="submit">Login</button>
+    <button class="button main" type="submit" [disabled]="!form.valid">Login</button>
     <a class="button normal" routerLink="/cadastrar">Cadastrar</a>
   </form>
 </section>

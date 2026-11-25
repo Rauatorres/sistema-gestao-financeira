@@ -18,6 +18,7 @@
   --weak-border-color: #bfbfbf;
   --userauth-pages-background-body-color: #efefef;
   --error-msg-text-color: #ad3621;
+  --disabled-button-bg-color: #90c6f1;
 }
 
 body {
@@ -93,8 +94,15 @@ body {
   background-color: var(--main-card-bg-color);
   color: white;
 }
+.user-auth-form.main-section .button.main {
+  background-color: var(--main-card-bg-color);
+  color: white;
+}
 .user-auth-form.main-section .button.normal {
   background-color: var(--navlink-bg-color);
+}
+.user-auth-form.main-section .button.main:disabled {
+  background-color: var(--disabled-button-bg-color);
 }
 
 @media (min-width: 500px) {

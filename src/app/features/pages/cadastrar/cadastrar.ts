@@ -62,9 +62,10 @@ export class Cadastrar {
   }
 
   onSubmit() {
-    if (this.form.valid) {
-      console.log('formulário válido');
-    }
+    // console.log('teste');
+    // console.log(this.form.valid);
+    // // if (this.form.valid) {
+    // // }
   }
 
   private confirmarSenha(controlName1: string, controleName2: string) {
