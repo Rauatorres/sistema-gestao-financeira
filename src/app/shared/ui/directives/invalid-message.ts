@@ -14,7 +14,8 @@ export class InvalidMessage {
     element.style.fontWeight = '600';
 
     effect(() => {
-      element.style.fontSize = this.viewPort.width() < 768 ? '0.7rem' : '1rem';
+      element.style.fontSize =
+        this.viewPort.width() < 768 ? '0.7rem' : this.viewPort.width() >= 1024 ? '0.6rem' : '1rem';
     });
   }
 }

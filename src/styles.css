@@ -49,10 +49,10 @@ body {
 
 .user-auth-form.main-section .input-area {
   margin-bottom: 1.8rem;
+  font-size: 0.8rem;
 }
 .user-auth-form.main-section .input-title,
 .user-auth-form.main-section .login-form input {
-  font-size: 0.8rem;
   margin: 0;
 }
 .user-auth-form.main-section .input-title {
@@ -103,6 +103,7 @@ body {
 }
 .user-auth-form.main-section .button.main:disabled {
   background-color: var(--disabled-button-bg-color);
+  cursor: auto;
 }
 
 @media (min-width: 500px) {
@@ -164,8 +165,41 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .user-auth-form.main-section {
+    padding: 1rem 3rem;
+  }
   .user-auth-form.main-section .login-form {
-    min-width: 20rem;
+    min-width: 15rem;
     width: 25vw;
+    padding: 1.3rem 3rem 2.5rem;
+  }
+  .user-auth-form.main-section .form-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .user-auth-form.main-section .input-area {
+    margin-bottom: 1rem;
+  }
+  .user-auth-form.main-section .input-title,
+  .user-auth-form.main-section .login-form input {
+    font-size: 0.6rem;
+  }
+  .user-auth-form.main-section .input-title {
+    margin-bottom: 0.5rem;
+  }
+  .user-auth-form.main-section .login-form input {
+    padding: 0.3rem 0.8rem;
+  }
+  .user-auth-form.main-section .input-icon {
+    font-size: 0.9rem;
+    top: 0.5rem;
+  }
+  .user-auth-form.main-section .button {
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
+    margin: 1.3rem 0;
   }
 }
